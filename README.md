@@ -54,7 +54,17 @@ python av_guard.py
 ```
 
 The included test runner evaluates ten authorization
-scenarios and reports pass/fail results.
+scenarios and reports pass/fail results. A successful run
+shows ten `[PASS]` lines and ends with:
+
+```text
+Passed: 10/10
+Accuracy: 100.0%
+```
+
+The process exits with status `0` when all scenarios pass,
+or `1` if any scenario fails. A `DENY` or `REVIEW` decision
+still passes when it matches the expected policy result.
 
 ## Authorization Decisions
 
